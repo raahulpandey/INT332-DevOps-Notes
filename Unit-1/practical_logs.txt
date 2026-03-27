@@ -11,3 +11,31 @@ docker/welcome-to-docker:latest   c4d56c24da4f       22.2MB         6.03MB   U
 hello-world:latest                452a468a4bf9       25.9kB         9.49kB   U    
 nginx:latest                      bc45d248c4e1        240MB         65.8MB   U    
 ubuntu:latest                     d1e2e92c075e        119MB         31.7MB   U    
+
+---
+
+## 13. Practical Output Verification
+
+### Command Used
+
+```bash
+docker ps -a
+docker images
+docker system df
+
+CONTAINER ID   IMAGE                             COMMAND                  CREATED       STATUS                      PORTS                  NAMES
+513a27b38ca0   ubuntu                            "/bin/bash"              9 hours ago   Exited (0) 9 hours ago                             lucid_moser
+b9fb14584ff8   hello-world                       "/hello"                 9 hours ago   Exited (0) 9 hours ago                             charming_bassi
+9a75238c85d3   ubuntu                            "/bin/bash"              9 hours ago   Exited (130) 9 hours ago                           happy_driscoll
+262bd344b295   hello-world                       "/hello"                 9 hours ago   Exited (0) 9 hours ago                             busy_dewdney
+38481d333867   ubuntu                            "/bin/bash"              12 days ago   Exited (255) 12 hours ago                          cool_feynman
+d4d69e7bc452   nginx                             "/docker-entrypoint.…"   12 days ago   Exited (0) 12 days ago                             competent_mccarthy
+ce9230133cdf   docker/welcome-to-docker:latest   "/docker-entrypoint.…"   13 days ago   Exited (255) 12 days ago    0.0.0.0:8088->80/tcp   welcome-to-docker
+
+IMAGE                             ID             DISK USAGE   CONTENT SIZE   EXTRA
+docker/welcome-to-docker:latest   c4d56c24da4f       22.2MB         6.03MB   U    
+hello-world:latest                452a468a4bf9       25.9kB         9.49kB   U    
+nginx:latest                      bc45d248c4e1        240MB         65.8MB   U    
+ubuntu:latest                     d1e2e92c075e        119MB         31.7MB   U    
+
+

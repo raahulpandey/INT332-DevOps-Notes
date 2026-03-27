@@ -97,3 +97,38 @@ Docker
 * Faster deployment
 
 ---
+---
+
+# 📌 Advanced Docker Concepts (Quick Reference Table)
+
+| Section | Topic | Description | Example Command / Flow |
+|--------|------|-------------|------------------------|
+| **6️⃣** | Docker Image Lifecycle | Docker image ek template hoti hai jisse containers bante hain. | Dockerfile → Build → Image → Run → Container |
+|  | Create Dockerfile | Instructions define karti hain ki image kaise banegi. | `FROM ubuntu:latest`<br>`RUN apt update`<br>`CMD ["echo","Hello Docker"]` |
+|  | Build Image | Dockerfile se image create hoti hai. | `docker build -t myimage .` |
+|  | Run Container | Image se container start hota hai. | `docker run myimage` |
+| **7️⃣** | Docker Container Lifecycle | Container ka lifecycle multiple stages se guzarta hai. | Create → Start → Run → Stop → Remove |
+|  | Container Commands | Container lifecycle manage karne ke commands. | `docker create nginx`<br>`docker start nginx`<br>`docker stop nginx`<br>`docker rm nginx` |
+| **8️⃣** | Docker Networking Basics | Containers network ke through communicate karte hain. | `docker network ls` |
+|  | Bridge Network | Default Docker network. | Container-to-container communication |
+|  | Host Network | Host network use karta hai. | Direct host networking |
+|  | None Network | Network disabled hota hai. | No connectivity |
+| **9️⃣** | Docker Storage Basics | Permanent data storage ke liye volumes use hote hain. | `docker volume create myvolume` |
+|  | Volume Commands | Available volumes list karne ke liye. | `docker volume ls` |
+|  | Volume Benefits | Data persistent rehta hai even after container deletion. | Backup & Data Safety |
+| **🔟** | Basic Docker Workflow | Docker ka simple workflow example. | `docker pull nginx`<br>`docker run -d -p 8080:80 nginx`<br>`docker ps` |
+|  | Browser Access | Running container ko browser me access karna. | `http://localhost:8080` |
+| **🧪** | Practical Commands | Common commands jo daily use hote hain. | `docker version`<br>`docker images`<br>`docker ps`<br>`docker network ls`<br>`docker volume ls` |
+
+---
+
+# 📌 Practical Output Section
+
+
+
+```bash
+docker version
+docker images
+docker ps
+docker network ls
+docker volume ls
